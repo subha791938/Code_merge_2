@@ -12,6 +12,7 @@
       *  XXXX     99-99-9999              Prod version                *
       *  ABCD     11-10-2019              R61 AIRP Change             *
       *  EFGH     11-01-2019              R61 NGVAM Change            * 
+      *  XYZ      11-01-2019              R61 PR                      * 
       *---------------------------------------------------------------*
       *                                   Record    Record     Key    *
       *  Function  Name     Organization  Format    Max-Min  Pos-Len  *
@@ -208,7 +209,8 @@
            if  CUSTLFFL-STATUS = '00'
                subtract APPL-RESULT from APPL-RESULT
            else
-               add 12 to ZERO giving APPL-RESULT
+               add 10 to ZERO giving APPL-RESULT                     -- PR
+               display 'Result' APPL-RESULT
            end-if
            if  APPL-AOK
                CONTINUE
